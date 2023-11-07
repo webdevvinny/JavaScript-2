@@ -1,0 +1,125 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    
+<h2>JavaScript Map Objects</h2>
+<p>Creating a Map from an Array:</p>
+
+<input type='search' id='dataInput' placeholder='Enter your search name!!'/><input type='submit' id='search' value='Search for Something!!'/>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+
+let num = ['one', 'two', 'three', 'four'];
+let nam = num.forEach(n => n);
+
+let nw = num.forEach((value, index) => {
+    document.getElementById("demo").innerHTML += value + ' ' +  index + '<br>';
+})
+
+try{
+document.querySelector('#search').addEventListener('click', () => {
+
+	let values = document.querySelector('#dataInput').value;
+    alert(values);
+    
+    let searchedItem = num.includes(value);
+    
+    if(searchedItem === true){
+    			document.querySelector('#dataInput').addEventListener('change', () => {
+                	  document.getElementById("demo").innerHTML += value;
+                })
+    }
+    else{
+    			document.querySelector('#dataInput').addEventListener('change', () => {
+                	  document.getElementById("demo").innerHTML = `${value} has not been found!!`;
+    }
+)}
+})
+
+}catch(err){
+   alert('There is an error here: ' + err);
+}
+
+
+</script>
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    
+<h2>JavaScript Map Objects</h2>
+<p>Creating a Map from an Array:</p>
+
+<input type='text' id='dataInput' placeholder='Enter your search name!!'/><input type='submit' id='search' value='Search for Something!!'/>
+
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+
+let nam = num.forEach(n => n);
+
+let nw = num.forEach((value, index) => {
+    document.getElementById("demo").innerHTML += value + ' ' +  index + '<br>';
+})
+
+try{
+document.querySelector('#search').addEventListener('click', () => {
+
+	let values = document.querySelector('#dataInput').value;
+  
+	let num = ['one', 'two', 'three', 'four'];
+    
+    let searchedItem = num.includes(values);
+    alert(searchedItem)
+    
+    if(searchedItem == true){
+    			document.querySelector('#dataInput').addEventListener('change', () => {
+                	  document.getElementById("demo1").innerHTML = values;
+                        alert(values);
+               })
+    }
+    else{
+    			document.querySelector('#dataInput').addEventListener('change', () => {
+                	  document.getElementById("demo2").innerHTML = `${values} has not been found!!`;
+    }
+)}
+})
+
+}catch(err){
+   alert('There is an error here: ' + err);
+}
+
+
+</script>
+
+
+</body>
+</html>
