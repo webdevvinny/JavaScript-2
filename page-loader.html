@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<style>
+ .main-page{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: darkmagenta;
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+  display: grid;
+  place-items: center;
+  
+ }
+ 
+ .main-page-go{
+   animation: scaled 1s;
+ }
+ 
+ .spinner{
+ 	
+    border: 5px solid yellow;
+    border-top: 5px outset green;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: spin 1s ease-out 4;
+   
+ }
+ 
+ @keyframes spin {
+ 
+  from{transform: rotate(0turn)}
+  to{transform: rotate(1turn)}
+ }
+ 
+ @keyframes scaled {
+ 
+  from{
+  
+   scale: 1;
+  
+  }
+  
+  to{
+  
+  scale: 0;
+  display: none;
+  }
+ 
+ 
+ }
+</style>
+
+<body>
+
+<button id='spin-button'>Load Page!!</button>
+<div id='spin-div'>
+
+<h1 id='spin-h'></h1>
+<div id='spin-p'>
+  
+
+</div>
+</div>
+<h2>JavaScript Getters and Setters</h2>
+
+<p>Getters and setters allow you to get and set properties via methods.</p>
+
+<script>
+document.getElementById("spin-button").onclick = () => {
+
+document.getElementById("spin-div").classList.add('main-page');
+document.getElementById("spin-p").classList.add('spinner');
+document.getElementById("spin-h").innerHTML = 'LOADING THE PAGE.... <br> PLEASE WAIT......';
+
+
+let clear = setTimeout(
+
+ () => {
+  
+  
+document.getElementById("spin-div").classList.add('main-page-go');
+document.getElementById("spin-p").classList.remove('spinner');
+ 
+ }
+
+, 4000);
+
+let clea1r = setTimeout(
+
+ () => {
+  
+  
+document.getElementById("spin-div").classList.remove('main-page');
+document.getElementById("spin-p").classList.remove('spinner');
+document.getElementById("spin-h").remove();
+ 
+ }
+
+, 5000);
+
+}
+
+
+</script>
+
+</body>
+</html>
