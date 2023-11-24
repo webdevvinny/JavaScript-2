@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #008CBA;
+}
+
+#button-test{
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  border: 1px solid darkgrey;
+  padding: 4px 8px;
+   position: relative;
+  top: 0;
+
+}
+
+
+#button-test:hover .tooltip{
+ display: block;
+
+}
+.tooltip::after{
+  content: '';
+ 
+  position: absolute;
+
+  
+  
+   top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip-class{
+ 
+}
+
+.tooltip{
+  position: absolute;
+  bottom: 120%;
+  left: -50%;
+  display: none;
+  width: 130px;
+  background-color: lightgrey;
+  padding: 0;
+  border-radius: 20px;
+}
+
+.test::after{
+
+
+content: '';
+
+/*
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-width: 2px;
+  border-style: solid;
+  border-color: red transparent transparent transparent;
+  
+  */
+  
+ 
+}
+</style>
+</head>
+<body>
+
+<div>
+  <h1>text formatting</h1>
+  <p>This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties.
+  The paragraph is indented, aligned, and
+  
+  
+  <button id='button-test'>Continue
+    
+    <div class='tooltip'>
+      make sure you read the istuction before you leave!!!!
+    </div>
+  </button> 
+
+  the space between characters is specified. The underline is removed from this colored
+  <a target="_blank" href="tryit.asp?filename=trycss_text">"Try it Yourself"</a> link.</p>
+</div>
+
+<p class='test'>erjeproerofer</p>
+
+</body>
+</html>
+
+
